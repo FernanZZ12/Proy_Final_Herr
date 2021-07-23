@@ -24,10 +24,16 @@ Partial Class Form3
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Codigolbl = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Nombrelbl = New System.Windows.Forms.Label()
+        Me.Suscripciontxtbx = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Descripcionlbl = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Descuentolbl = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -44,56 +50,110 @@ Partial Class Form3
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(154, 92)
+        Me.DataGridView1.Location = New System.Drawing.Point(13, 81)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(449, 171)
+        Me.DataGridView1.Size = New System.Drawing.Size(449, 348)
         Me.DataGridView1.TabIndex = 1
         '
-        'Label2
+        'Codigolbl
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(108, 296)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(165, 21)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Código de Suscripción"
+        Me.Codigolbl.AutoSize = True
+        Me.Codigolbl.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Codigolbl.Location = New System.Drawing.Point(481, 83)
+        Me.Codigolbl.Name = "Codigolbl"
+        Me.Codigolbl.Size = New System.Drawing.Size(165, 21)
+        Me.Codigolbl.TabIndex = 2
+        Me.Codigolbl.Text = "Código de Suscripción"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(302, 298)
+        Me.TextBox1.Location = New System.Drawing.Point(652, 83)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(208, 23)
+        Me.TextBox1.Size = New System.Drawing.Size(137, 23)
         Me.TextBox1.TabIndex = 3
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(528, 298)
+        Me.Button1.Location = New System.Drawing.Point(574, 122)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(138, 23)
         Me.Button1.TabIndex = 4
         Me.Button1.Text = "Buscar"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(321, 356)
+        Me.Button2.Location = New System.Drawing.Point(565, 298)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(160, 23)
         Me.Button2.TabIndex = 5
         Me.Button2.Text = "Modificar Suscripción"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Nombrelbl
+        '
+        Me.Nombrelbl.AutoSize = True
+        Me.Nombrelbl.Location = New System.Drawing.Point(493, 157)
+        Me.Nombrelbl.Name = "Nombrelbl"
+        Me.Nombrelbl.Size = New System.Drawing.Size(68, 15)
+        Me.Nombrelbl.TabIndex = 6
+        Me.Nombrelbl.Text = "Suscripcion"
+        '
+        'Suscripciontxtbx
+        '
+        Me.Suscripciontxtbx.Location = New System.Drawing.Point(574, 154)
+        Me.Suscripciontxtbx.Name = "Suscripciontxtbx"
+        Me.Suscripciontxtbx.Size = New System.Drawing.Size(214, 23)
+        Me.Suscripciontxtbx.TabIndex = 7
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(574, 198)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(214, 23)
+        Me.TextBox2.TabIndex = 9
+        '
+        'Descripcionlbl
+        '
+        Me.Descripcionlbl.AutoSize = True
+        Me.Descripcionlbl.Location = New System.Drawing.Point(493, 201)
+        Me.Descripcionlbl.Name = "Descripcionlbl"
+        Me.Descripcionlbl.Size = New System.Drawing.Size(69, 15)
+        Me.Descripcionlbl.TabIndex = 8
+        Me.Descripcionlbl.Text = "Descripcion"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(574, 241)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(103, 23)
+        Me.TextBox3.TabIndex = 11
+        '
+        'Descuentolbl
+        '
+        Me.Descuentolbl.AutoSize = True
+        Me.Descuentolbl.Location = New System.Drawing.Point(493, 244)
+        Me.Descuentolbl.Name = "Descuentolbl"
+        Me.Descuentolbl.Size = New System.Drawing.Size(63, 15)
+        Me.Descuentolbl.TabIndex = 10
+        Me.Descuentolbl.Text = "Descuento"
+        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.Descuentolbl)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.Descripcionlbl)
+        Me.Controls.Add(Me.Suscripciontxtbx)
+        Me.Controls.Add(Me.Nombrelbl)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Codigolbl)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Form3"
@@ -106,8 +166,14 @@ Partial Class Form3
 
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Label2 As Label
+    Friend WithEvents Codigolbl As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents Nombrelbl As Label
+    Friend WithEvents Suscripciontxtbx As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Descripcionlbl As Label
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Descuentolbl As Label
 End Class
