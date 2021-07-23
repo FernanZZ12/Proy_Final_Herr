@@ -22,10 +22,10 @@ Partial Class gymbokuform
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.LabFactura = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Facturalbl = New System.Windows.Forms.Label()
+        Me.FacturaDGV = New System.Windows.Forms.DataGridView()
         Me.CodProtxtbx = New System.Windows.Forms.TextBox()
-        Me.Labid_prod = New System.Windows.Forms.Label()
+        Me.CodProductolbl = New System.Windows.Forms.Label()
         Me.Agregarbttn = New System.Windows.Forms.Button()
         Me.ID_usulbl = New System.Windows.Forms.Label()
         Me.Idusutxtbx = New System.Windows.Forms.TextBox()
@@ -35,7 +35,7 @@ Partial Class gymbokuform
         Me.Descuentolbl = New System.Windows.Forms.Label()
         Me.Desctxtbx = New System.Windows.Forms.TextBox()
         Me.Totallbl = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Totaltxtbx = New System.Windows.Forms.TextBox()
         Me.AgregFactbttn = New System.Windows.Forms.Button()
         Me.numlbl = New System.Windows.Forms.Label()
         Me.FactNumlbl = New System.Windows.Forms.Label()
@@ -46,29 +46,29 @@ Partial Class gymbokuform
         Me.EntrenadoresItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FacturaItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Cantlbl = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Cantidadtxtbx = New System.Windows.Forms.TextBox()
+        CType(Me.FacturaDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'LabFactura
+        'Facturalbl
         '
-        Me.LabFactura.AutoSize = True
-        Me.LabFactura.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.LabFactura.Location = New System.Drawing.Point(332, 18)
-        Me.LabFactura.Name = "LabFactura"
-        Me.LabFactura.Size = New System.Drawing.Size(109, 40)
-        Me.LabFactura.TabIndex = 0
-        Me.LabFactura.Text = "Factura"
+        Me.Facturalbl.AutoSize = True
+        Me.Facturalbl.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Facturalbl.Location = New System.Drawing.Point(332, 18)
+        Me.Facturalbl.Name = "Facturalbl"
+        Me.Facturalbl.Size = New System.Drawing.Size(109, 40)
+        Me.Facturalbl.TabIndex = 0
+        Me.Facturalbl.Text = "Factura"
         '
-        'DataGridView1
+        'FacturaDGV
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 135)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(558, 500)
-        Me.DataGridView1.TabIndex = 1
+        Me.FacturaDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.FacturaDGV.Location = New System.Drawing.Point(12, 135)
+        Me.FacturaDGV.Name = "FacturaDGV"
+        Me.FacturaDGV.RowTemplate.Height = 25
+        Me.FacturaDGV.Size = New System.Drawing.Size(558, 500)
+        Me.FacturaDGV.TabIndex = 1
         '
         'CodProtxtbx
         '
@@ -77,15 +77,15 @@ Partial Class gymbokuform
         Me.CodProtxtbx.Size = New System.Drawing.Size(332, 23)
         Me.CodProtxtbx.TabIndex = 2
         '
-        'Labid_prod
+        'CodProductolbl
         '
-        Me.Labid_prod.AutoSize = True
-        Me.Labid_prod.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Labid_prod.Location = New System.Drawing.Point(12, 78)
-        Me.Labid_prod.Name = "Labid_prod"
-        Me.Labid_prod.Size = New System.Drawing.Size(181, 25)
-        Me.Labid_prod.TabIndex = 3
-        Me.Labid_prod.Text = "Codigo de Producto"
+        Me.CodProductolbl.AutoSize = True
+        Me.CodProductolbl.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.CodProductolbl.Location = New System.Drawing.Point(12, 78)
+        Me.CodProductolbl.Name = "CodProductolbl"
+        Me.CodProductolbl.Size = New System.Drawing.Size(181, 25)
+        Me.CodProductolbl.TabIndex = 3
+        Me.CodProductolbl.Text = "Codigo de Producto"
         '
         'Agregarbttn
         '
@@ -170,13 +170,13 @@ Partial Class gymbokuform
         Me.Totallbl.TabIndex = 12
         Me.Totallbl.Text = "Total"
         '
-        'TextBox1
+        'Totaltxtbx
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox1.Location = New System.Drawing.Point(467, 647)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 29)
-        Me.TextBox1.TabIndex = 13
+        Me.Totaltxtbx.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Totaltxtbx.Location = New System.Drawing.Point(467, 647)
+        Me.Totaltxtbx.Name = "Totaltxtbx"
+        Me.Totaltxtbx.Size = New System.Drawing.Size(100, 29)
+        Me.Totaltxtbx.TabIndex = 13
         '
         'AgregFactbttn
         '
@@ -255,25 +255,25 @@ Partial Class gymbokuform
         Me.Cantlbl.TabIndex = 19
         Me.Cantlbl.Text = "Cant"
         '
-        'TextBox2
+        'Cantidadtxtbx
         '
-        Me.TextBox2.Location = New System.Drawing.Point(395, 106)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(46, 23)
-        Me.TextBox2.TabIndex = 20
+        Me.Cantidadtxtbx.Location = New System.Drawing.Point(395, 106)
+        Me.Cantidadtxtbx.Name = "Cantidadtxtbx"
+        Me.Cantidadtxtbx.Size = New System.Drawing.Size(46, 23)
+        Me.Cantidadtxtbx.TabIndex = 20
         '
         'gymbokuform
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(801, 713)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.Cantidadtxtbx)
         Me.Controls.Add(Me.Cantlbl)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.FactNumlbl)
         Me.Controls.Add(Me.numlbl)
         Me.Controls.Add(Me.AgregFactbttn)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Totaltxtbx)
         Me.Controls.Add(Me.Totallbl)
         Me.Controls.Add(Me.Desctxtbx)
         Me.Controls.Add(Me.Descuentolbl)
@@ -283,14 +283,14 @@ Partial Class gymbokuform
         Me.Controls.Add(Me.Idusutxtbx)
         Me.Controls.Add(Me.ID_usulbl)
         Me.Controls.Add(Me.Agregarbttn)
-        Me.Controls.Add(Me.Labid_prod)
+        Me.Controls.Add(Me.CodProductolbl)
         Me.Controls.Add(Me.CodProtxtbx)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.LabFactura)
+        Me.Controls.Add(Me.FacturaDGV)
+        Me.Controls.Add(Me.Facturalbl)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "gymbokuform"
         Me.Text = "Gym  Boku"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FacturaDGV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -298,10 +298,10 @@ Partial Class gymbokuform
 
     End Sub
 
-    Friend WithEvents LabFactura As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Facturalbl As Label
+    Friend WithEvents FacturaDGV As DataGridView
     Friend WithEvents CodProtxtbx As TextBox
-    Friend WithEvents Labid_prod As Label
+    Friend WithEvents CodProductolbl As Label
     Friend WithEvents Agregarbttn As Button
     Friend WithEvents ID_usulbl As Label
     Friend WithEvents Idusutxtbx As TextBox
@@ -311,7 +311,7 @@ Partial Class gymbokuform
     Friend WithEvents Descuentolbl As Label
     Friend WithEvents Desctxtbx As TextBox
     Friend WithEvents Totallbl As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Totaltxtbx As TextBox
     Friend WithEvents AgregFactbttn As Button
     Friend WithEvents numlbl As Label
     Friend WithEvents FactNumlbl As Label
@@ -322,5 +322,5 @@ Partial Class gymbokuform
     Friend WithEvents EntrenadoresItem As ToolStripMenuItem
     Friend WithEvents FacturaItem As ToolStripMenuItem
     Friend WithEvents Cantlbl As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Cantidadtxtbx As TextBox
 End Class
