@@ -37,12 +37,17 @@ Public Class gymbokuform
     End Sub
 
     Private Sub Agregarbttn_Click(sender As Object, e As EventArgs) Handles Agregarbttn.Click
-        Try
-            If (Idusutxtbx.Text.Trim = "") Then
-                MsgBox("No puede dejar el ID de Usuario en blanco")
-            ElseIf (Cantidadtxtbx.Text.Trim = "" Or Cantidadtxtbx.Text = "0" And CodProtxtbx.Text.Trim = "") Then
-                MsgBox("Error en datos suministrados para ingresar productos")
-            Else
+        If (Idusutxtbx.Text.Trim = "") Then
+            MsgBox("No puede dejar el ID de Usuario en blanco")
+        ElseIf (Cantidadtxtbx.Text.Trim = "" Or Cantidadtxtbx.Text = "0" And CodProtxtbx.Text.Trim = "") Then
+            MsgBox("Error en datos suministrados para ingresar productos")
+        Else
+            Try
+                If (Idusutxtbx.Text.Trim = "") Then
+                    MsgBox("No puede dejar el ID de Usuario en blanco")
+                ElseIf (Cantidadtxtbx.Text.Trim = "" Or Cantidadtxtbx.Text = "0" And CodProtxtbx.Text.Trim = "") Then
+                    MsgBox("Error en datos suministrados para ingresar productos")
+                Else
                 Dim temp As New DataSet
                 Dim adaptador As New SqlDataAdapter("Select ID_Producto,
                                                             Descripcion,
@@ -53,16 +58,17 @@ Public Class gymbokuform
                     MsgBox("No hay nada")
                 End If
                 Dim newrow As DataRow = detalles.NewRow
-                newrow("ID_Producto") = temp.Tables("Producto").Rows(0).Item(0)
-                newrow("Descripcion") = temp.Tables("Producto").Rows(0).Item(1)
-                newrow("Cantidad") = Convert.ToSingle(Cantidadtxtbx.Text.ToString)
-                newrow("Precio") = temp.Tables("Producto").Rows.Item(2)
-                newrow("Subtotal") = Math.Round(Convert.ToSingle(Cantidadtxtbx) * temp.Tables("Producto").Rows(0).Item(2), 2)
-                detalles.Rows.Add(newrow)
-                FacturaDGV.DataSource = temp.Tables("Producto")
-            End If
-        Catch ex As Exception
-            MsgBox("Error")
-        End Try
+                    newrow("ID_Producto") = temp.Tables("Producto").Rows(0).Item(0)
+                    newrow("Descripcion") = temp.Tables("Producto").Rows(0).Item(1)
+                    newrow("Cantidad") = Convert.ToSingle(Cantidadtxtbx.Text.ToString)
+                    newrow("Precio") = temp.Tables("Producto").Rows(0).Item(2)
+                    newrow("Subtotal") = Math.Round(Convert.ToSingle(Cantidadtxtbx.Text.ToString) * temp.Tables("Producto").Rows(0).Item(2), 2)
+                    detalles.Rows.Add(newrow)
+                    FacturaDGV.DataSource = detalles
+                End If
+            Catch ex As Exception
+                MsgBox("Error")
+            End Try
+        End If
     End Sub
 End Class
