@@ -5,10 +5,10 @@ Public Class Form5
     End Sub
 
     Private Sub ModificarBtn_Click(sender As Object, e As EventArgs) Handles ModificarBtn.Click
-
+        'Boton de Modificar'
         Dim adaptador As New SqlDataAdapter("Select * from Usuario where ID_Usuario = '" & IDUtxtbx.Text & "'", gymbokuform.cn)
-            Dim adaptador1 As New SqlDataAdapter("Select * from Usuario where ID_Entrenador = '" & IDEtxtbx.Text & "'", gymbokuform.cn)
-            Dim ds As New DataSet
+        Dim adaptador1 As New SqlDataAdapter("Select * from Usuario where ID_Entrenador = '" & IDEtxtbx.Text & "'", gymbokuform.cn) 'Si existe entrenador'
+        Dim ds As New DataSet
             Dim ds1 As New DataSet
             adaptador.Fill(ds, "Usuario")
             adaptador1.Fill(ds1, "Usuario")

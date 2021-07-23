@@ -5,11 +5,12 @@ Public Class Form2
     End Sub
 
     Private Sub Añadirbtn_Click(sender As Object, e As EventArgs) Handles Añadirbtn.Click
+        'Boton de Añadir'
         Try
-            If IDtxtbx.Text = "" Or Nombretxtbx.Text = "" Or Emailtxtbx.Text = "" Or Entrenatxtbx.Text = "" Then
+            If IDtxtbx.Text = "" Or Nombretxtbx.Text = "" Or Emailtxtbx.Text = "" Or Entrenatxtbx.Text = "" Then 'Si esta en blanco'
                 MsgBox("No puede dejar espacios en blanco")
             Else
-                Dim adaptador As New SqlCommand("insert into Usuario values('" & IDtxtbx.Text & "','" & Nombretxtbx.Text & "','" & Emailtxtbx.Text & "','" & "NA" & "','" & Nothing & "','" & Entrenatxtbx.Text & "')", gymbokuform.cn)
+                Dim adaptador As New SqlCommand("insert into Usuario values('" & IDtxtbx.Text & "','" & Nombretxtbx.Text & "','" & Emailtxtbx.Text & "','" & "NA" & "','" & Nothing & "','" & Entrenatxtbx.Text & "')", gymbokuform.cn) ''Insercion de Usuario
                 adaptador.ExecuteNonQuery()
 
                 MsgBox("Se ha añadido exitosamente")

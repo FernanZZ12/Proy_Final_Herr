@@ -1,6 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class Clientes
     Private Sub Clientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Carga de ComboBox, y el DGV'
         BuscarCB.SelectedIndex = 0
         Dim temp As New DataSet
         Dim adaptador As New SqlDataAdapter("Select *
@@ -11,13 +12,14 @@ Public Class Clientes
     End Sub
 
     Private Sub BuscarBtn_Click(sender As Object, e As EventArgs) Handles BuscarBtn.Click
+        'Boton de Buscar'
         Dim temp As New DataSet
-
+        'Try por si pasa cualquier error'
         Try
-            If (BuscarTxtbx.Text.Trim = "") Then
+            If (BuscarTxtbx.Text.Trim = "") Then    'Si el txtbox esta en blanco'
                 MsgBox("No puede dejar el código de producto en blanco")
             Else
-                If (BuscarCB.SelectedIndex = 0) Then
+                If (BuscarCB.SelectedIndex = 0) Then       'Diferentes Opciones del ComboBox'
                     Dim adaptador As New SqlDataAdapter("Select *
                                                      from Usuario where ID_Usuario = '" & BuscarTxtbx.Text & "'", gymbokuform.cn)
                     adaptador.Fill(temp, "Usuario")
@@ -43,9 +45,6 @@ Public Class Clientes
                     adaptador.Fill(temp, "Usuario")
                     ClienteDGV.DataSource = temp.Tables("Usuario")
                 End If
-
-
-
 
             End If
         Catch ex As Exception

@@ -1,8 +1,9 @@
 ﻿Imports System.Data.SqlClient
 Public Class Entrenadores
     Private Sub BuscarBtn_Click(sender As Object, e As EventArgs) Handles BuscarBtn.Click
+        'Boton de Buscar'
         Try
-            If (Codtxtbx.Text.Trim = "") Then
+            If (Codtxtbx.Text.Trim = "") Then  'Si textbox esta en blanco'
                 MsgBox("No puede dejar el código de entrenador en blanco")
             Else
                 Dim temp As New DataSet
@@ -10,7 +11,7 @@ Public Class Entrenadores
                                                      from Entrenador where ID_Entrenador = '" & Codtxtbx.Text & "'", gymbokuform.cn)
 
                 adaptador.Fill(temp, "Entrenador")
-                EntrenaDGV.DataSource = temp.Tables("Entrenador")
+                EntrenaDGV.DataSource = temp.Tables("Entrenador") 'Carga de DGV'
 
             End If
         Catch ex As Exception
@@ -23,14 +24,15 @@ Public Class Entrenadores
     End Sub
 
     Private Sub ElimEntreBtn_Click(sender As Object, e As EventArgs) Handles ElimEntreBtn.Click
+        'Boton de Eliminar'
         Try
             Dim adaptador As New SqlDataAdapter("Select * from Entrenador where ID_Entrenador = '" & Codtxtbx.Text.Trim & "'", gymbokuform.cn)
             Dim ds As New DataSet
             adaptador.Fill(ds, "Usuario")
-            If (Codtxtbx.Text.Trim = "") Then
+            If (Codtxtbx.Text.Trim = "") Then 'Si textbox esta en blanco'
                 MsgBox("No puede dejar el código de entrenador en blanco")
             Else
-                If ds.Tables("Usuario").Rows.Count > 0 Then
+                If ds.Tables("Usuario").Rows.Count > 0 Then  'Si existe, entra'
                     Dim adaptador1 As New SqlCommand("Delete From Entrenador where ID_Entrenador ='" & Codtxtbx.Text & "'", gymbokuform.cn)
                     adaptador1.ExecuteNonQuery()
                     MsgBox("Se ha eliminado exitosamente")

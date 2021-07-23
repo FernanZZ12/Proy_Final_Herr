@@ -1,16 +1,16 @@
 ﻿Imports System.Data.SqlClient
 Public Class Form3
     Private Sub Eliminarbtn_Click(sender As Object, e As EventArgs) Handles Eliminarbtn.Click
-
+        'Boton Eliminar'
         Try
             Dim adaptador As New SqlDataAdapter("Select * from Usuario where ID_Usuario = '" & IDtxtbx.Text & "'", gymbokuform.cn)
             Dim ds As New DataSet
             adaptador.Fill(ds, "Usuario")
-            If (IDtxtbx.Text = "") Then
+            If (IDtxtbx.Text = "") Then  ''Si esta en Blanco
                 MsgBox("No puede dejar el ID del usuario en blanco")
             Else
-                If ds.Tables("Usuario").Rows.Count > 0 Then
-                    Dim adaptador1 As New SqlCommand("Delete From Usuario where ID_Usuario ='" & IDtxtbx.Text & "'", gymbokuform.cn)
+                If ds.Tables("Usuario").Rows.Count > 0 Then  ''Si Existe
+                    Dim adaptador1 As New SqlCommand("Delete From Usuario where ID_Usuario ='" & IDtxtbx.Text & "'", gymbokuform.cn) ''Borra en la BD
                     adaptador1.ExecuteNonQuery()
                     MsgBox("Se ha eliminado exitosamente")
                 Else

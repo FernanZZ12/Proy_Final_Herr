@@ -5,16 +5,17 @@ Public Class Form4
     End Sub
 
     Private Sub CambiarBtn_Click(sender As Object, e As EventArgs) Handles CambiarBtn.Click
+        'Boton de Modificar'
         Try
             Dim adaptador As New SqlDataAdapter("Select * from Usuario where ID_Usuario = '" & IDtxtbx.Text & "'", gymbokuform.cn)
             Dim ds As New DataSet
             adaptador.Fill(ds, "Usuario")
-            If (IDtxtbx.Text.Trim = "") Then
+            If (IDtxtbx.Text.Trim = "") Then  'Si esta en blanco'
                 MsgBox("No puede dejar el ID del usuario en blanco")
             Else
-                If ds.Tables("Usuario").Rows.Count > 0 Then
-                    If (SuscripCB.SelectedIndex = 0) Then
-                        Dim adaptador1 As New SqlCommand("update Usuario set ID_Suscripcion ='" & "SI" & "' Where ID_Usuario = '" & IDtxtbx.Text & "'", gymbokuform.cn)
+                If ds.Tables("Usuario").Rows.Count > 0 Then ''Si no existe
+                    If (SuscripCB.SelectedIndex = 0) Then   ''Opcion del ComboBox
+                        Dim adaptador1 As New SqlCommand("update Usuario set ID_Suscripcion ='" & "SI" & "' Where ID_Usuario = '" & IDtxtbx.Text & "'", gymbokuform.cn) ''Actualiza en la BD
                         adaptador1.ExecuteNonQuery()
                         MsgBox("Se ha actualizado exitosamente")
                     ElseIf (SuscripCB.SelectedIndex = 1) Then

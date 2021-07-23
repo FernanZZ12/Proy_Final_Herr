@@ -2,6 +2,7 @@
 
 Public Class Facturas
     Private Sub Buscarbtn_Click(sender As Object, e As EventArgs) Handles Buscarbtn.Click
+        'Boton de Buscar'
         Dim temp As New DataSet
         Dim adaptador As New SqlDataAdapter("select ID_Orden,
                                                     ID_Producto,
@@ -11,7 +12,7 @@ Public Class Facturas
                                                     from Detalle
                                              where ID_Orden ='" & Facturatxtbox.Text & "'", gymbokuform.cn)
         adaptador.Fill(temp, "Detalles")
-        If (temp.Tables("Detalles").Rows.Count > 0) Then
+        If (temp.Tables("Detalles").Rows.Count > 0) Then  'Si existen los detalles, entra'
             DataGridView1.DataSource = temp.Tables("Detalles")
             Dim subtotal As Double = Sumar(temp.Tables("Detalles"))
             Dim descuent As Double = Math.Round(Sumar(temp.Tables("Detalles")) * Convert.ToDouble(temp.Tables("Detalles").Rows(0).Item(3)), 2)
@@ -24,6 +25,7 @@ Public Class Facturas
 
     End Sub
     Function Sumar(detalles As DataTable) As Double
+        'Suma Subtotal'
         Dim Total As New Double
         For i As Integer = 0 To detalles.Rows.Count - 1
             Total = Total + detalles.Rows(i).Item(4)

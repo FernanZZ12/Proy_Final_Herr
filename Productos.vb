@@ -1,8 +1,9 @@
 ﻿Imports System.Data.SqlClient
 Public Class Productos
     Private Sub BuscarBtn_Click(sender As Object, e As EventArgs) Handles BuscarBtn.Click
+        'Boton de Buscar'
         Try
-            If (Prodtxtbx.Text.Trim = "") Then
+            If (Prodtxtbx.Text.Trim = "") Then 'Si textbox esta en blanco'
                 MsgBox("No puede dejar el código de producto en blanco")
             Else
                 Dim temp As New DataSet
@@ -10,7 +11,7 @@ Public Class Productos
                                                      from Producto where ID_Producto = '" & Prodtxtbx.Text & "'", gymbokuform.cn)
 
                 adaptador.Fill(temp, "Suscripcion")
-                ProdDGV.DataSource = temp.Tables("Suscripcion")
+                ProdDGV.DataSource = temp.Tables("Suscripcion") 'Llenar DGV'
 
             End If
         Catch ex As Exception
