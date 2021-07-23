@@ -45,8 +45,10 @@ Partial Class gymbokuform
         Me.ProductosItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EntrenadoresItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FacturaItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PlanteamientoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Cantlbl = New System.Windows.Forms.Label()
         Me.Cantidadtxtbx = New System.Windows.Forms.TextBox()
+        Me.PresentacionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.FacturaDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -208,7 +210,7 @@ Partial Class gymbokuform
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesItem, Me.SuscripcionesItem, Me.ProductosItem, Me.EntrenadoresItem, Me.FacturaItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesItem, Me.SuscripcionesItem, Me.ProductosItem, Me.EntrenadoresItem, Me.FacturaItem, Me.PlanteamientoToolStripMenuItem, Me.PresentacionToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(801, 24)
@@ -245,6 +247,12 @@ Partial Class gymbokuform
         Me.FacturaItem.Size = New System.Drawing.Size(63, 20)
         Me.FacturaItem.Text = "Facturas"
         '
+        'PlanteamientoToolStripMenuItem
+        '
+        Me.PlanteamientoToolStripMenuItem.Name = "PlanteamientoToolStripMenuItem"
+        Me.PlanteamientoToolStripMenuItem.Size = New System.Drawing.Size(96, 20)
+        Me.PlanteamientoToolStripMenuItem.Text = "Planteamiento"
+        '
         'Cantlbl
         '
         Me.Cantlbl.AutoSize = True
@@ -261,6 +269,12 @@ Partial Class gymbokuform
         Me.Cantidadtxtbx.Name = "Cantidadtxtbx"
         Me.Cantidadtxtbx.Size = New System.Drawing.Size(46, 23)
         Me.Cantidadtxtbx.TabIndex = 20
+        '
+        'PresentacionToolStripMenuItem
+        '
+        Me.PresentacionToolStripMenuItem.Name = "PresentacionToolStripMenuItem"
+        Me.PresentacionToolStripMenuItem.Size = New System.Drawing.Size(87, 20)
+        Me.PresentacionToolStripMenuItem.Text = "Presentacion"
         '
         'gymbokuform
         '
@@ -323,4 +337,6 @@ Partial Class gymbokuform
     Friend WithEvents FacturaItem As ToolStripMenuItem
     Friend WithEvents Cantlbl As Label
     Friend WithEvents Cantidadtxtbx As TextBox
+    Friend WithEvents PlanteamientoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PresentacionToolStripMenuItem As ToolStripMenuItem
 End Class

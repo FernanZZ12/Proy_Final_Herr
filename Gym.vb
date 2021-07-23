@@ -18,6 +18,7 @@ Public Class gymbokuform
         Entrenadores.Show()
     End Sub
 
+
     Private Sub gymbokuform_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             Dim conexion As String
@@ -169,5 +170,13 @@ Public Class gymbokuform
 
     Private Sub FacturaItem_Click(sender As Object, e As EventArgs) Handles FacturaItem.Click
         Facturas.Show()
+    End Sub
+
+    Private Sub PlanteamientoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PlanteamientoToolStripMenuItem.Click
+        Form10.Show()
+    End Sub
+
+    Private Sub PresentacionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PresentacionToolStripMenuItem.Click
+        Form9.Show()
     End Sub
 End Class

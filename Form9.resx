@@ -57,7 +57,36 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="Presentlbl.Text" xml:space="preserve">
+    <value> Universidad Tecnológica de Panamá
+Facultad de Ingeniería de Sistemas Computacionales
+Departamento de Programación de Computadoras
+
+
+                     Semestral
+
+
+
+Intergrantes:
+Valerie Hernandez 8-1039-1537
+Alejandro Young 8-954-1318
+Fernando Zeng 8-970-242 
+Carlos Zhong 3-752-1461
+Rafael Rojas E-8-161099                  
+     
+                                         
+Grupo: 1IL133
+
+
+Profesora:
+Ana Araba de Ruiz
+
+
+version de visual:
+versión 2019 .NET Core 5.0
+
+
+
+</value>
+  </data>
 </root>
