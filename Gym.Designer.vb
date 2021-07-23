@@ -46,9 +46,10 @@ Partial Class gymbokuform
         Me.EntrenadoresItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FacturaItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PlanteamientoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PresentacionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Cantlbl = New System.Windows.Forms.Label()
         Me.Cantidadtxtbx = New System.Windows.Forms.TextBox()
-        Me.PresentacionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Eliminarbtn = New System.Windows.Forms.Button()
         CType(Me.FacturaDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -253,6 +254,12 @@ Partial Class gymbokuform
         Me.PlanteamientoToolStripMenuItem.Size = New System.Drawing.Size(96, 20)
         Me.PlanteamientoToolStripMenuItem.Text = "Planteamiento"
         '
+        'PresentacionToolStripMenuItem
+        '
+        Me.PresentacionToolStripMenuItem.Name = "PresentacionToolStripMenuItem"
+        Me.PresentacionToolStripMenuItem.Size = New System.Drawing.Size(87, 20)
+        Me.PresentacionToolStripMenuItem.Text = "Presentacion"
+        '
         'Cantlbl
         '
         Me.Cantlbl.AutoSize = True
@@ -270,17 +277,22 @@ Partial Class gymbokuform
         Me.Cantidadtxtbx.Size = New System.Drawing.Size(46, 23)
         Me.Cantidadtxtbx.TabIndex = 20
         '
-        'PresentacionToolStripMenuItem
+        'Eliminarbtn
         '
-        Me.PresentacionToolStripMenuItem.Name = "PresentacionToolStripMenuItem"
-        Me.PresentacionToolStripMenuItem.Size = New System.Drawing.Size(87, 20)
-        Me.PresentacionToolStripMenuItem.Text = "Presentacion"
+        Me.Eliminarbtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Eliminarbtn.Location = New System.Drawing.Point(627, 210)
+        Me.Eliminarbtn.Name = "Eliminarbtn"
+        Me.Eliminarbtn.Size = New System.Drawing.Size(145, 37)
+        Me.Eliminarbtn.TabIndex = 21
+        Me.Eliminarbtn.Text = "Eliminar Producto"
+        Me.Eliminarbtn.UseVisualStyleBackColor = True
         '
         'gymbokuform
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(801, 713)
+        Me.Controls.Add(Me.Eliminarbtn)
         Me.Controls.Add(Me.Cantidadtxtbx)
         Me.Controls.Add(Me.Cantlbl)
         Me.Controls.Add(Me.MenuStrip1)
@@ -339,4 +351,5 @@ Partial Class gymbokuform
     Friend WithEvents Cantidadtxtbx As TextBox
     Friend WithEvents PlanteamientoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PresentacionToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Eliminarbtn As Button
 End Class

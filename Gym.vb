@@ -77,22 +77,26 @@ Public Class gymbokuform
                                                                 Precio
                                                          from Producto where ID_Producto = '" & CodProtxtbx.Text & "'", cn)
                             adaptador.Fill(temp, "Producto")
-                            Dim newrow As DataRow = detalles.NewRow
-                            newrow("ID_Producto") = temp.Tables("Producto").Rows(0).Item(0)
-                            newrow("Descripcion") = temp.Tables("Producto").Rows(0).Item(1)
-                            newrow("Cantidad") = Convert.ToSingle(Cantidadtxtbx.Text.ToString)
-                            newrow("Precio") = temp.Tables("Producto").Rows(0).Item(2)
-                            newrow("Subtotal") = Math.Round(Convert.ToSingle(Cantidadtxtbx.Text.ToString) * temp.Tables("Producto").Rows(0).Item(2), 2)
-                            detalles.Rows.Add(newrow)
+                            If temp.Tables("Producto").Rows.Count > 0 Then
+                                Dim newrow As DataRow = detalles.NewRow
+                                newrow("ID_Producto") = temp.Tables("Producto").Rows(0).Item(0)
+                                newrow("Descripcion") = temp.Tables("Producto").Rows(0).Item(1)
+                                newrow("Cantidad") = Convert.ToSingle(Cantidadtxtbx.Text.ToString)
+                                newrow("Precio") = temp.Tables("Producto").Rows(0).Item(2)
+                                newrow("Subtotal") = Math.Round(Convert.ToSingle(Cantidadtxtbx.Text.ToString) * temp.Tables("Producto").Rows(0).Item(2), 2)
+                                detalles.Rows.Add(newrow)
 
-                            Dim Subtotal As Double = Sumar()
-                            Dim Descuento As Double = Math.Round(Subtotal * Convert.ToDouble(temp.Tables("Usuario").Rows(0).Item(3)), 2)
-                            Subtotaltxtbox.Text = Subtotal
-                            Desctxtbx.Text = Descuento
-                            Totaltxtbx.Text = Subtotal - Descuento
-                            Cantidadtxtbx.Text = 1
-                            CodProtxtbx.Text = ""
-                            FacturaDGV.DataSource = detalles
+                                Dim Subtotal As Double = Sumar()
+                                Dim Descuento As Double = Math.Round(Subtotal * Convert.ToDouble(temp.Tables("Usuario").Rows(0).Item(3)), 2)
+                                Subtotaltxtbox.Text = Subtotal
+                                Desctxtbx.Text = Descuento
+                                Totaltxtbx.Text = Subtotal - Descuento
+                                Cantidadtxtbx.Text = 1
+                                CodProtxtbx.Text = ""
+                                FacturaDGV.DataSource = detalles
+                            Else
+                                MsgBox("El Producto no existe")
+                            End If
                         Else
                             MsgBox("El Cliente no existe")
                         End If
@@ -191,5 +195,28 @@ Public Class gymbokuform
     'menustrip que al ser presionado muestra la presentacion del grupo'
     Private Sub PresentacionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PresentacionToolStripMenuItem.Click
         Form9.Show()
+    End Sub
+
+    Private Sub Eliminarbtn_Click(sender As Object, e As EventArgs) Handles Eliminarbtn.Click
+        If FacturaDGV.SelectedRows.Count > 0 Then
+            Dim temp As New DataSet
+            Dim adaptador2 As New SqlDataAdapter("select u.ID_Usuario,
+                                                                u.Nombre as Nombre_de_Usuario,
+                                                                s.Nombre_Suscripcion as Suscripcion,
+                                                                s.Descuento as Descuento_por_Suscripcion
+                                                         from Usuario u inner join Suscripcion s on u.ID_Suscripcion = s.ID_Suscripcion
+                                                         where u.ID_Usuario = '" & Idusutxtbx.Text & "'", cn)
+            adaptador2.Fill(temp, "Usuario")
+            FacturaDGV.Rows.Remove(FacturaDGV.SelectedRows(0))
+            Dim Subtotal As Double = Sumar()
+            Dim Descuento As Double = Math.Round(Subtotal * Convert.ToDouble(temp.Tables("Usuario").Rows(0).Item(3)), 2)
+            Subtotaltxtbox.Text = Subtotal
+            Desctxtbx.Text = Descuento
+            Totaltxtbx.Text = Subtotal - Descuento
+            Cantidadtxtbx.Text = 1
+            CodProtxtbx.Text = ""
+        Else
+            MsgBox("No hay producto que eliminar")
+        End If
     End Sub
 End Class
