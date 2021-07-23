@@ -62,7 +62,7 @@ Partial Class Form4
         '
         'BuscarBtn
         '
-        Me.BuscarBtn.Location = New System.Drawing.Point(490, 80)
+        Me.BuscarBtn.Location = New System.Drawing.Point(490, 84)
         Me.BuscarBtn.Name = "BuscarBtn"
         Me.BuscarBtn.Size = New System.Drawing.Size(75, 23)
         Me.BuscarBtn.TabIndex = 3
@@ -80,7 +80,7 @@ Partial Class Form4
         '
         'EliminarProBtn
         '
-        Me.EliminarProBtn.Location = New System.Drawing.Point(594, 229)
+        Me.EliminarProBtn.Location = New System.Drawing.Point(594, 225)
         Me.EliminarProBtn.Name = "EliminarProBtn"
         Me.EliminarProBtn.Size = New System.Drawing.Size(172, 23)
         Me.EliminarProBtn.TabIndex = 5

@@ -45,6 +45,8 @@ Partial Class gymbokuform
         Me.ProductosItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EntrenadoresItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FacturaItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Cantlbl = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -72,7 +74,7 @@ Partial Class gymbokuform
         '
         Me.CodProtxtbx.Location = New System.Drawing.Point(12, 106)
         Me.CodProtxtbx.Name = "CodProtxtbx"
-        Me.CodProtxtbx.Size = New System.Drawing.Size(429, 23)
+        Me.CodProtxtbx.Size = New System.Drawing.Size(332, 23)
         Me.CodProtxtbx.TabIndex = 2
         '
         'Labid_prod
@@ -98,7 +100,7 @@ Partial Class gymbokuform
         '
         Me.ID_usulbl.AutoSize = True
         Me.ID_usulbl.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ID_usulbl.Location = New System.Drawing.Point(580, 105)
+        Me.ID_usulbl.Location = New System.Drawing.Point(597, 107)
         Me.ID_usulbl.Name = "ID_usulbl"
         Me.ID_usulbl.Size = New System.Drawing.Size(86, 21)
         Me.ID_usulbl.TabIndex = 5
@@ -107,7 +109,7 @@ Partial Class gymbokuform
         'Idusutxtbx
         '
         Me.Idusutxtbx.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Idusutxtbx.Location = New System.Drawing.Point(672, 101)
+        Me.Idusutxtbx.Location = New System.Drawing.Point(689, 102)
         Me.Idusutxtbx.Name = "Idusutxtbx"
         Me.Idusutxtbx.Size = New System.Drawing.Size(100, 29)
         Me.Idusutxtbx.TabIndex = 6
@@ -243,11 +245,30 @@ Partial Class gymbokuform
         Me.FacturaItem.Size = New System.Drawing.Size(63, 20)
         Me.FacturaItem.Text = "Facturas"
         '
+        'Cantlbl
+        '
+        Me.Cantlbl.AutoSize = True
+        Me.Cantlbl.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Cantlbl.Location = New System.Drawing.Point(350, 109)
+        Me.Cantlbl.Name = "Cantlbl"
+        Me.Cantlbl.Size = New System.Drawing.Size(39, 20)
+        Me.Cantlbl.TabIndex = 19
+        Me.Cantlbl.Text = "Cant"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(395, 106)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(46, 23)
+        Me.TextBox2.TabIndex = 20
+        '
         'gymbokuform
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(801, 713)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.Cantlbl)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.FactNumlbl)
         Me.Controls.Add(Me.numlbl)
@@ -300,4 +321,6 @@ Partial Class gymbokuform
     Friend WithEvents ProductosItem As ToolStripMenuItem
     Friend WithEvents EntrenadoresItem As ToolStripMenuItem
     Friend WithEvents FacturaItem As ToolStripMenuItem
+    Friend WithEvents Cantlbl As Label
+    Friend WithEvents TextBox2 As TextBox
 End Class
