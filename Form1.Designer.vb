@@ -39,14 +39,20 @@ Partial Class gymbokuform
         Me.AgregFactbttn = New System.Windows.Forms.Button()
         Me.numlbl = New System.Windows.Forms.Label()
         Me.FactNumlbl = New System.Windows.Forms.Label()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ClientesItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SuscripcionesItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProductosItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EntrenadoresItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'LabFactura
         '
         Me.LabFactura.AutoSize = True
         Me.LabFactura.Font = New System.Drawing.Font("Segoe UI", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.LabFactura.Location = New System.Drawing.Point(332, 9)
+        Me.LabFactura.Location = New System.Drawing.Point(332, 18)
         Me.LabFactura.Name = "LabFactura"
         Me.LabFactura.Size = New System.Drawing.Size(109, 40)
         Me.LabFactura.TabIndex = 0
@@ -197,11 +203,45 @@ Partial Class gymbokuform
         Me.FactNumlbl.TabIndex = 16
         Me.FactNumlbl.Text = "Numero de Factura:"
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesItem, Me.SuscripcionesItem, Me.ProductosItem, Me.EntrenadoresItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(801, 24)
+        Me.MenuStrip1.TabIndex = 18
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'ClientesItem
+        '
+        Me.ClientesItem.Name = "ClientesItem"
+        Me.ClientesItem.Size = New System.Drawing.Size(61, 20)
+        Me.ClientesItem.Text = "Clientes"
+        '
+        'SuscripcionesItem
+        '
+        Me.SuscripcionesItem.Name = "SuscripcionesItem"
+        Me.SuscripcionesItem.Size = New System.Drawing.Size(91, 20)
+        Me.SuscripcionesItem.Text = "Suscripciones"
+        '
+        'ProductosItem
+        '
+        Me.ProductosItem.Name = "ProductosItem"
+        Me.ProductosItem.Size = New System.Drawing.Size(73, 20)
+        Me.ProductosItem.Text = "Productos"
+        '
+        'EntrenadoresItem
+        '
+        Me.EntrenadoresItem.Name = "EntrenadoresItem"
+        Me.EntrenadoresItem.Size = New System.Drawing.Size(88, 20)
+        Me.EntrenadoresItem.Text = "Entrenadores"
+        '
         'gymbokuform
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(790, 704)
+        Me.ClientSize = New System.Drawing.Size(801, 713)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.FactNumlbl)
         Me.Controls.Add(Me.numlbl)
         Me.Controls.Add(Me.AgregFactbttn)
@@ -219,9 +259,12 @@ Partial Class gymbokuform
         Me.Controls.Add(Me.CodProtxtbx)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.LabFactura)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "gymbokuform"
         Me.Text = "Gym  Boku"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -244,4 +287,9 @@ Partial Class gymbokuform
     Friend WithEvents AgregFactbttn As Button
     Friend WithEvents numlbl As Label
     Friend WithEvents FactNumlbl As Label
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents ClientesItem As ToolStripMenuItem
+    Friend WithEvents SuscripcionesItem As ToolStripMenuItem
+    Friend WithEvents ProductosItem As ToolStripMenuItem
+    Friend WithEvents EntrenadoresItem As ToolStripMenuItem
 End Class
