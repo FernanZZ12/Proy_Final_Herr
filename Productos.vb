@@ -17,4 +17,16 @@ Public Class Productos
             MsgBox("Error")
         End Try
     End Sub
+
+    Private Sub ModificarProBtn_Click(sender As Object, e As EventArgs) Handles ModificarProBtn.Click
+        Form6.Show()
+    End Sub
+
+    Private Sub AgregarProBtn_Click(sender As Object, e As EventArgs) Handles AgregarProBtn.Click
+        Form7.Show()
+    End Sub
+
+    Private Sub EliminarProBtn_Click(sender As Object, e As EventArgs) Handles EliminarProBtn.Click
+        Form8.Show()
+    End Sub
 End Class

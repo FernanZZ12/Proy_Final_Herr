@@ -52,4 +52,20 @@ Public Class Clientes
             MsgBox("Error")
         End Try
     End Sub
+
+    Private Sub AgregarClienteBtn_Click(sender As Object, e As EventArgs) Handles AgregarClienteBtn.Click
+        Form2.Show()
+    End Sub
+
+    Private Sub EliminarCliBtn_Click(sender As Object, e As EventArgs) Handles EliminarCliBtn.Click
+        Form3.Show()
+    End Sub
+
+    Private Sub CambiarSuscBtn_Click(sender As Object, e As EventArgs) Handles CambiarSuscBtn.Click
+        Form4.Show()
+    End Sub
+
+    Private Sub CambiarEntrBtn_Click(sender As Object, e As EventArgs) Handles CambiarEntrBtn.Click
+        Form5.Show()
+    End Sub
 End Class
