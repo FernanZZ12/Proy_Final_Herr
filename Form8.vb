@@ -10,7 +10,7 @@ Public Class Form8
             Dim ds As New DataSet
             adaptador.Fill(ds, "Producto")
             If (IDPtxtbx.Text = "") Then
-                MsgBox("No puede dejar el ID del usuario en blanco")
+                MsgBox("No puede dejar el ID del producto en blanco")
             Else
                 If ds.Tables("Producto").Rows.Count > 0 Then
                     Dim adaptador1 As New SqlCommand("Delete From Producto where ID_Producto ='" & IDPtxtbx.Text & "'", gymbokuform.cn)
