@@ -94,7 +94,7 @@ Partial Class Entrenadores
         Me.Codtxtbx.Size = New System.Drawing.Size(286, 23)
         Me.Codtxtbx.TabIndex = 7
         '
-        'Form5
+        'Entrenadores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -106,7 +106,7 @@ Partial Class Entrenadores
         Me.Controls.Add(Me.BuscarBtn)
         Me.Controls.Add(Me.EntrenaDGV)
         Me.Controls.Add(Me.Titulolbl)
-        Me.Name = "Form5"
+        Me.Name = "Entrenadores"
         Me.Text = "Form5"
         CType(Me.EntrenaDGV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
