@@ -23,7 +23,6 @@ Partial Class Suscripciones
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Titulolbl = New System.Windows.Forms.Label()
-        Me.SuscripcionDGV = New System.Windows.Forms.DataGridView()
         Me.Codigolbl = New System.Windows.Forms.Label()
         Me.CodigoTxtBx = New System.Windows.Forms.TextBox()
         Me.BuscarBtn = New System.Windows.Forms.Button()
@@ -34,6 +33,7 @@ Partial Class Suscripciones
         Me.Descripcionlbl = New System.Windows.Forms.Label()
         Me.Descuentotxtbx = New System.Windows.Forms.TextBox()
         Me.Descuentolbl = New System.Windows.Forms.Label()
+        Me.SuscripcionDGV = New System.Windows.Forms.DataGridView()
         CType(Me.SuscripcionDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -46,15 +46,6 @@ Partial Class Suscripciones
         Me.Titulolbl.Size = New System.Drawing.Size(176, 37)
         Me.Titulolbl.TabIndex = 0
         Me.Titulolbl.Text = "Suscripciones"
-        '
-        'SuscripcionDGV
-        '
-        Me.SuscripcionDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.SuscripcionDGV.Location = New System.Drawing.Point(13, 81)
-        Me.SuscripcionDGV.Name = "SuscripcionDGV"
-        Me.SuscripcionDGV.RowTemplate.Height = 25
-        Me.SuscripcionDGV.Size = New System.Drawing.Size(449, 348)
-        Me.SuscripcionDGV.TabIndex = 1
         '
         'Codigolbl
         '
@@ -139,6 +130,15 @@ Partial Class Suscripciones
         Me.Descuentolbl.TabIndex = 10
         Me.Descuentolbl.Text = "Descuento"
         '
+        'SuscripcionDGV
+        '
+        Me.SuscripcionDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.SuscripcionDGV.Location = New System.Drawing.Point(13, 81)
+        Me.SuscripcionDGV.Name = "SuscripcionDGV"
+        Me.SuscripcionDGV.RowTemplate.Height = 25
+        Me.SuscripcionDGV.Size = New System.Drawing.Size(449, 348)
+        Me.SuscripcionDGV.TabIndex = 1
+        '
         'Suscripciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -165,7 +165,6 @@ Partial Class Suscripciones
     End Sub
 
     Friend WithEvents Titulolbl As Label
-    Friend WithEvents SuscripcionDGV As DataGridView
     Friend WithEvents Codigolbl As Label
     Friend WithEvents CodigoTxtBx As TextBox
     Friend WithEvents BuscarBtn As Button
@@ -176,4 +175,5 @@ Partial Class Suscripciones
     Friend WithEvents Descripcionlbl As Label
     Friend WithEvents Descuentotxtbx As TextBox
     Friend WithEvents Descuentolbl As Label
+    Friend WithEvents SuscripcionDGV As DataGridView
 End Class
