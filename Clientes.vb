@@ -1,6 +1,10 @@
 ﻿Imports System.Data.SqlClient
 Public Class Clientes
-    Private Sub BuscarCB_SelectedIndexChanged(sender As Object, e As EventArgs) Handles BuscarCB.SelectedIndexChanged
+    Private Sub Clientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        BuscarCB.SelectedIndex = 0
+    End Sub
+
+    Private Sub BuscarBtn_Click(sender As Object, e As EventArgs) Handles BuscarBtn.Click
         Try
             If (BuscarTxtbx.Text.Trim = "") Then
                 MsgBox("No puede dejar el código de producto en blanco")
