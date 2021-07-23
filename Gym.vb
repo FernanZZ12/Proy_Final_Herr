@@ -61,6 +61,21 @@ Public Class gymbokuform
                     newrow("Precio") = temp.Tables("Producto").Rows(0).Item(2)
                     newrow("Subtotal") = Math.Round(Convert.ToSingle(Cantidadtxtbx.Text.ToString) * temp.Tables("Producto").Rows(0).Item(2), 2)
                     detalles.Rows.Add(newrow)
+
+                    Dim adaptador2 As New SqlDataAdapter("select u.ID_Usuario,
+                                                                u.Nombre as Nombre_de_Usuario,
+                                                                s.Nombre_Suscripcion as Suscripcion,
+                                                                s.Descuento as Descuento_por_Suscripcion
+                                                         from Usuario u inner join Suscripcion s on u.ID_Suscripcion = s.ID_Suscripcion
+                                                         where u.ID_Usuario = '" & Idusutxtbx.Text & "'", cn)
+                    adaptador2.Fill(temp, "Usuario")
+                    Dim Subtotal As Double = Sumar()
+                    Dim Descuento As Double = Math.Round(Subtotal * Convert.ToDouble(temp.Tables("Usuario").Rows(0).Item(3)), 2)
+                    Subtotaltxtbox.Text = Subtotal
+                    Desctxtbx.Text = Descuento
+                    Totaltxtbx.Text = Subtotal - Descuento
+                    Cantidadtxtbx.Text = 1
+                    CodProtxtbx.Text = ""
                     FacturaDGV.DataSource = detalles
                 End If
             Catch ex As Exception
@@ -68,4 +83,12 @@ Public Class gymbokuform
             End Try
         End If
     End Sub
+
+    Function Sumar() As Double
+        Dim Total As New Double
+        For i As Integer = 0 To detalles.Rows.Count - 1
+            Total = Total + detalles.Rows(i).Item(4)
+        Next
+        Return Total
+    End Function
 End Class
