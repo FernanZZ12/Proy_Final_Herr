@@ -1,11 +1,12 @@
 ﻿Imports System.Data.SqlClient
 Public Class Form7
     Private Sub Agregarbtn_Click(sender As Object, e As EventArgs) Handles Agregarbtn.Click
+        'Boton Agregar'
         Try
-            If IDCtxtbx.Text = "" Or IDPtxtbx.Text = "" Or Marcatxtbx.Text = "" Or Preciotxtbx.Text = "" Or Descriptxtbx.Text = "" Then
+            If IDCtxtbx.Text = "" Or IDPtxtbx.Text = "" Or Marcatxtbx.Text = "" Or Preciotxtbx.Text = "" Or Descriptxtbx.Text = "" Then 'Verifica Espacios en Blanco'
                 MsgBox("No puede dejar espacios en blanco")
             Else
-                Dim adaptador As New SqlCommand("insert into Producto values('" & IDPtxtbx.Text & "','" & IDCtxtbx.Text & "','" & Marcatxtbx.Text & "','" & Descriptxtbx.Text & "','" & Preciotxtbx.Text & "')", gymbokuform.cn)
+                Dim adaptador As New SqlCommand("insert into Producto values('" & IDPtxtbx.Text & "','" & IDCtxtbx.Text & "','" & Marcatxtbx.Text & "','" & Descriptxtbx.Text & "','" & Preciotxtbx.Text & "')", gymbokuform.cn) 'Insercion a la BD'
                 adaptador.ExecuteNonQuery()
 
                 MsgBox("Se ha añadido exitosamente")

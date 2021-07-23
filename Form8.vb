@@ -5,14 +5,15 @@ Public Class Form8
     End Sub
 
     Private Sub Eliminarbtn_Click(sender As Object, e As EventArgs) Handles Eliminarbtn.Click
+        'Boton Eliminar'
         Try
             Dim adaptador As New SqlDataAdapter("Select * from Producto where ID_Producto = '" & IDPtxtbx.Text & "'", gymbokuform.cn)
             Dim ds As New DataSet
             adaptador.Fill(ds, "Producto")
-            If (IDPtxtbx.Text = "") Then
+            If (IDPtxtbx.Text = "") Then    'Si esta en blanco'
                 MsgBox("No puede dejar el ID del producto en blanco")
             Else
-                If ds.Tables("Producto").Rows.Count > 0 Then
+                If ds.Tables("Producto").Rows.Count > 0 Then 'Si existe'
                     Dim adaptador1 As New SqlCommand("Delete From Producto where ID_Producto ='" & IDPtxtbx.Text & "'", gymbokuform.cn)
                     adaptador1.ExecuteNonQuery()
                     MsgBox("Se ha eliminado exitosamente")
