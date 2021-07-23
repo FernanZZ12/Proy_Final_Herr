@@ -2,23 +2,29 @@
 Public Class gymbokuform
     Public cn As New SqlConnection
     Dim detalles As New DataTable
+
+    'Al presionar el menustrip de Clientes se muestra la pantalla de Clientes'
     Private Sub ClientesItem_Click(sender As Object, e As EventArgs) Handles ClientesItem.Click
         Clientes.Show()
     End Sub
 
+    'Al presionar el menustrip de Suscripciones se muestra la pantalla de Suscripciones'
     Private Sub SuscripcionesItem_Click(sender As Object, e As EventArgs) Handles SuscripcionesItem.Click
         Suscripciones.Show()
     End Sub
 
+    'Al presionar el menustrip de Productos se muestra la pantalla de Productos'
     Private Sub ProductosItem_Click(sender As Object, e As EventArgs) Handles ProductosItem.Click
         Productos.Show()
     End Sub
 
+    'Al presionar el menustrip de Entrenadores se muestra la pantalla de Entrenadores'
     Private Sub EntrenadoresItem_Click(sender As Object, e As EventArgs) Handles EntrenadoresItem.Click
         Entrenadores.Show()
     End Sub
 
 
+    'Al iniciar la aplicacion se establece la conexion con la base de datos y se crea el datable para guardar'
     Private Sub gymbokuform_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             Dim conexion As String
@@ -43,6 +49,7 @@ Public Class gymbokuform
         End Try
     End Sub
 
+    'Se valida todos los paramentros necesario para agregar el producto a la table detalles'
     Private Sub Agregarbttn_Click(sender As Object, e As EventArgs) Handles Agregarbttn.Click
         If (Idusutxtbx.Text.Trim = "") Then
             MsgBox("No puede dejar el ID de Usuario en blanco")
@@ -100,6 +107,7 @@ Public Class gymbokuform
         End If
     End Sub
 
+    'una funcion el cual realiza sumas de la tabla detalle'
     Function Sumar() As Double
         Dim Total As New Double
         For i As Integer = 0 To detalles.Rows.Count - 1
@@ -108,6 +116,7 @@ Public Class gymbokuform
         Return Total
     End Function
 
+    'funcion en el cual verificamos si el usuario esta comprando mas de una suscripcion'
     Function verifica() As Boolean
         Dim temp As New DataSet
         Dim adaptador2 As New SqlDataAdapter("select *
@@ -124,6 +133,7 @@ Public Class gymbokuform
         Return True
     End Function
 
+    'boton para agregar la factura a la base de datos validando tambien los parametros llenados'
     Private Sub AgregFactbttn_Click(sender As Object, e As EventArgs) Handles AgregFactbttn.Click
         If detalles.Rows.Count > 0 Then
             Dim temp As New DataSet
@@ -168,14 +178,17 @@ Public Class gymbokuform
         End If
     End Sub
 
+    'menustrip en donde muestra la pantalla de facturas'
     Private Sub FacturaItem_Click(sender As Object, e As EventArgs) Handles FacturaItem.Click
         Facturas.Show()
     End Sub
 
+    'menustrip que al ser presionado muestra el planteamiento del problema'
     Private Sub PlanteamientoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PlanteamientoToolStripMenuItem.Click
         Form10.Show()
     End Sub
 
+    'menustrip que al ser presionado muestra la presentacion del grupo'
     Private Sub PresentacionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PresentacionToolStripMenuItem.Click
         Form9.Show()
     End Sub
