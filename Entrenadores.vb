@@ -44,4 +44,13 @@ Public Class Entrenadores
             MsgBox("Error")
         End Try
     End Sub
+
+    Private Sub Entrenadores_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim temp As New DataSet
+        Dim adaptador As New SqlDataAdapter("Select *
+                                                     from Entrenador", gymbokuform.cn)
+
+        adaptador.Fill(temp, "Entrenador")
+        EntrenaDGV.DataSource = temp.Tables("Entrenador") 'Carga de DGV'
+    End Sub
 End Class

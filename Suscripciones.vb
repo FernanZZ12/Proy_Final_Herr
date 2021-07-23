@@ -37,4 +37,13 @@ Public Class Suscripciones
             End If
         End If
     End Sub
+
+    Private Sub Suscripciones_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim temp As New DataSet
+        Dim adaptador As New SqlDataAdapter("Select *
+                                                     from Suscripcion", gymbokuform.cn)
+
+        adaptador.Fill(temp, "Suscripcion")
+        SuscripcionDGV.DataSource = temp.Tables("Suscripcion") 'Llenar DGV'
+    End Sub
 End Class

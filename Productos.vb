@@ -30,4 +30,13 @@ Public Class Productos
     Private Sub EliminarProBtn_Click(sender As Object, e As EventArgs) Handles EliminarProBtn.Click
         Form8.Show()
     End Sub
+
+    Private Sub Productos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim temp As New DataSet
+        Dim adaptador As New SqlDataAdapter("Select *
+                                                     from Producto", gymbokuform.cn)
+
+        adaptador.Fill(temp, "Productos")
+        ProdDGV.DataSource = temp.Tables("Productos") 'Llenar DGV'
+    End Sub
 End Class
