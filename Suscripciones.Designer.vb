@@ -23,7 +23,7 @@ Partial Class Suscripciones
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Titulolbl = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.SuscripcionDGV = New System.Windows.Forms.DataGridView()
         Me.Codigolbl = New System.Windows.Forms.Label()
         Me.CodigoTxtBx = New System.Windows.Forms.TextBox()
         Me.BuscarBtn = New System.Windows.Forms.Button()
@@ -34,7 +34,7 @@ Partial Class Suscripciones
         Me.Descripcionlbl = New System.Windows.Forms.Label()
         Me.Descuentotxtbx = New System.Windows.Forms.TextBox()
         Me.Descuentolbl = New System.Windows.Forms.Label()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SuscripcionDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Titulolbl
@@ -47,14 +47,14 @@ Partial Class Suscripciones
         Me.Titulolbl.TabIndex = 0
         Me.Titulolbl.Text = "Suscripciones"
         '
-        'DataGridView1
+        'SuscripcionDGV
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(13, 81)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(449, 348)
-        Me.DataGridView1.TabIndex = 1
+        Me.SuscripcionDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.SuscripcionDGV.Location = New System.Drawing.Point(13, 81)
+        Me.SuscripcionDGV.Name = "SuscripcionDGV"
+        Me.SuscripcionDGV.RowTemplate.Height = 25
+        Me.SuscripcionDGV.Size = New System.Drawing.Size(449, 348)
+        Me.SuscripcionDGV.TabIndex = 1
         '
         'Codigolbl
         '
@@ -139,7 +139,7 @@ Partial Class Suscripciones
         Me.Descuentolbl.TabIndex = 10
         Me.Descuentolbl.Text = "Descuento"
         '
-        'Form3
+        'Suscripciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -154,18 +154,18 @@ Partial Class Suscripciones
         Me.Controls.Add(Me.BuscarBtn)
         Me.Controls.Add(Me.CodigoTxtBx)
         Me.Controls.Add(Me.Codigolbl)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.SuscripcionDGV)
         Me.Controls.Add(Me.Titulolbl)
-        Me.Name = "Form3"
+        Me.Name = "Suscripciones"
         Me.Text = "Form3"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SuscripcionDGV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Titulolbl As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents SuscripcionDGV As DataGridView
     Friend WithEvents Codigolbl As Label
     Friend WithEvents CodigoTxtBx As TextBox
     Friend WithEvents BuscarBtn As Button
