@@ -22,52 +22,52 @@ Partial Class Form2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.lblTitulo = New System.Windows.Forms.Label()
-        Me.DGVCliente = New System.Windows.Forms.DataGridView()
-        Me.CBBuscar = New System.Windows.Forms.ComboBox()
-        Me.TxtBx = New System.Windows.Forms.TextBox()
+        Me.Titulolbl = New System.Windows.Forms.Label()
+        Me.ClienteDGV = New System.Windows.Forms.DataGridView()
+        Me.BuscarCB = New System.Windows.Forms.ComboBox()
+        Me.BuscarTxtbx = New System.Windows.Forms.TextBox()
         Me.BuscarBtn = New System.Windows.Forms.Button()
         Me.AgregarClienteBtn = New System.Windows.Forms.Button()
         Me.CambiarSuscBtn = New System.Windows.Forms.Button()
         Me.CambiarEntrBtn = New System.Windows.Forms.Button()
         Me.EliminarCliBtn = New System.Windows.Forms.Button()
-        CType(Me.DGVCliente, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ClienteDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'lblTitulo
+        'Titulolbl
         '
-        Me.lblTitulo.AutoSize = True
-        Me.lblTitulo.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblTitulo.Location = New System.Drawing.Point(313, 21)
-        Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(111, 37)
-        Me.lblTitulo.TabIndex = 0
-        Me.lblTitulo.Text = "Clientes"
+        Me.Titulolbl.AutoSize = True
+        Me.Titulolbl.Font = New System.Drawing.Font("Segoe UI", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Titulolbl.Location = New System.Drawing.Point(313, 21)
+        Me.Titulolbl.Name = "Titulolbl"
+        Me.Titulolbl.Size = New System.Drawing.Size(111, 37)
+        Me.Titulolbl.TabIndex = 0
+        Me.Titulolbl.Text = "Clientes"
         '
-        'DGVCliente
+        'ClienteDGV
         '
-        Me.DGVCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVCliente.Location = New System.Drawing.Point(12, 103)
-        Me.DGVCliente.Name = "DGVCliente"
-        Me.DGVCliente.RowTemplate.Height = 25
-        Me.DGVCliente.Size = New System.Drawing.Size(448, 331)
-        Me.DGVCliente.TabIndex = 1
+        Me.ClienteDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ClienteDGV.Location = New System.Drawing.Point(12, 103)
+        Me.ClienteDGV.Name = "ClienteDGV"
+        Me.ClienteDGV.RowTemplate.Height = 25
+        Me.ClienteDGV.Size = New System.Drawing.Size(448, 331)
+        Me.ClienteDGV.TabIndex = 1
         '
-        'CBBuscar
+        'BuscarCB
         '
-        Me.CBBuscar.FormattingEnabled = True
-        Me.CBBuscar.Items.AddRange(New Object() {"ID de usuario", "Nombre", "Correo", "Suscripcion", "Entrenador"})
-        Me.CBBuscar.Location = New System.Drawing.Point(479, 103)
-        Me.CBBuscar.Name = "CBBuscar"
-        Me.CBBuscar.Size = New System.Drawing.Size(121, 23)
-        Me.CBBuscar.TabIndex = 3
+        Me.BuscarCB.FormattingEnabled = True
+        Me.BuscarCB.Items.AddRange(New Object() {"ID de usuario", "Nombre", "Correo", "Suscripcion", "Entrenador"})
+        Me.BuscarCB.Location = New System.Drawing.Point(479, 103)
+        Me.BuscarCB.Name = "BuscarCB"
+        Me.BuscarCB.Size = New System.Drawing.Size(121, 23)
+        Me.BuscarCB.TabIndex = 3
         '
-        'TxtBx
+        'BuscarTxtbx
         '
-        Me.TxtBx.Location = New System.Drawing.Point(623, 103)
-        Me.TxtBx.Name = "TxtBx"
-        Me.TxtBx.Size = New System.Drawing.Size(136, 23)
-        Me.TxtBx.TabIndex = 4
+        Me.BuscarTxtbx.Location = New System.Drawing.Point(623, 103)
+        Me.BuscarTxtbx.Name = "BuscarTxtbx"
+        Me.BuscarTxtbx.Size = New System.Drawing.Size(136, 23)
+        Me.BuscarTxtbx.TabIndex = 4
         '
         'BuscarBtn
         '
@@ -124,22 +124,22 @@ Partial Class Form2
         Me.Controls.Add(Me.CambiarSuscBtn)
         Me.Controls.Add(Me.AgregarClienteBtn)
         Me.Controls.Add(Me.BuscarBtn)
-        Me.Controls.Add(Me.TxtBx)
-        Me.Controls.Add(Me.CBBuscar)
-        Me.Controls.Add(Me.DGVCliente)
-        Me.Controls.Add(Me.lblTitulo)
+        Me.Controls.Add(Me.BuscarTxtbx)
+        Me.Controls.Add(Me.BuscarCB)
+        Me.Controls.Add(Me.ClienteDGV)
+        Me.Controls.Add(Me.Titulolbl)
         Me.Name = "Form2"
         Me.Text = "Form2"
-        CType(Me.DGVCliente, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ClienteDGV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents lblTitulo As Label
-    Friend WithEvents DGVCliente As DataGridView
-    Friend WithEvents CBBuscar As ComboBox
-    Friend WithEvents TxtBx As TextBox
+    Friend WithEvents Titulolbl As Label
+    Friend WithEvents ClienteDGV As DataGridView
+    Friend WithEvents BuscarCB As ComboBox
+    Friend WithEvents BuscarTxtbx As TextBox
     Friend WithEvents BuscarBtn As Button
     Friend WithEvents AgregarClienteBtn As Button
     Friend WithEvents CambiarSuscBtn As Button
