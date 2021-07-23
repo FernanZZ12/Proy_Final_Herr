@@ -50,10 +50,13 @@ Public Class gymbokuform
                 Else
                     Dim temp As New DataSet
                     Dim adaptador As New SqlDataAdapter("Select ID_Producto,
-                                                                Descripcion,
-                                                                Precio
-                                                         from Producto where ID_Producto = '" & CodProtxtbx.Text & "'", cn)
+                                                            Descripcion,
+                                                            Precio
+                                                     from Producto where ID_Producto = '" & CodProtxtbx.Text & "'", cn)
                     adaptador.Fill(temp, "Producto")
+                    If temp.Tables("Producto").Rows.Count = 0 Then
+                        MsgBox("No hay nada")
+                    End If
                     Dim newrow As DataRow = detalles.NewRow
                     newrow("ID_Producto") = temp.Tables("Producto").Rows(0).Item(0)
                     newrow("Descripcion") = temp.Tables("Producto").Rows(0).Item(1)
