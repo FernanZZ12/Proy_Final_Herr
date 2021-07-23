@@ -24,13 +24,13 @@ Partial Class Productos
     Private Sub InitializeComponent()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.lblCodProd = New System.Windows.Forms.Label()
-        Me.lblTexto = New System.Windows.Forms.TextBox()
+        Me.Prodtxtbx = New System.Windows.Forms.TextBox()
         Me.BuscarBtn = New System.Windows.Forms.Button()
         Me.ModificarProBtn = New System.Windows.Forms.Button()
         Me.EliminarProBtn = New System.Windows.Forms.Button()
         Me.AgregarProBtn = New System.Windows.Forms.Button()
-        Me.DGVProd = New System.Windows.Forms.DataGridView()
-        CType(Me.DGVProd, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ProdDGV = New System.Windows.Forms.DataGridView()
+        CType(Me.ProdDGV, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblTitulo
@@ -53,12 +53,12 @@ Partial Class Productos
         Me.lblCodProd.TabIndex = 1
         Me.lblCodProd.Text = "Código de Producto"
         '
-        'lblTexto
+        'Prodtxtbx
         '
-        Me.lblTexto.Location = New System.Drawing.Point(193, 84)
-        Me.lblTexto.Name = "lblTexto"
-        Me.lblTexto.Size = New System.Drawing.Size(264, 23)
-        Me.lblTexto.TabIndex = 2
+        Me.Prodtxtbx.Location = New System.Drawing.Point(193, 84)
+        Me.Prodtxtbx.Name = "Prodtxtbx"
+        Me.Prodtxtbx.Size = New System.Drawing.Size(264, 23)
+        Me.Prodtxtbx.TabIndex = 2
         '
         'BuscarBtn
         '
@@ -96,31 +96,31 @@ Partial Class Productos
         Me.AgregarProBtn.Text = "Agregar Producto"
         Me.AgregarProBtn.UseVisualStyleBackColor = True
         '
-        'DGVProd
+        'ProdDGV
         '
-        Me.DGVProd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGVProd.Location = New System.Drawing.Point(27, 132)
-        Me.DGVProd.Name = "DGVProd"
-        Me.DGVProd.RowTemplate.Height = 25
-        Me.DGVProd.Size = New System.Drawing.Size(538, 247)
-        Me.DGVProd.TabIndex = 7
+        Me.ProdDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ProdDGV.Location = New System.Drawing.Point(27, 132)
+        Me.ProdDGV.Name = "ProdDGV"
+        Me.ProdDGV.RowTemplate.Height = 25
+        Me.ProdDGV.Size = New System.Drawing.Size(538, 247)
+        Me.ProdDGV.TabIndex = 7
         '
-        'Form4
+        'Productos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.DGVProd)
+        Me.Controls.Add(Me.ProdDGV)
         Me.Controls.Add(Me.AgregarProBtn)
         Me.Controls.Add(Me.EliminarProBtn)
         Me.Controls.Add(Me.ModificarProBtn)
         Me.Controls.Add(Me.BuscarBtn)
-        Me.Controls.Add(Me.lblTexto)
+        Me.Controls.Add(Me.Prodtxtbx)
         Me.Controls.Add(Me.lblCodProd)
         Me.Controls.Add(Me.lblTitulo)
-        Me.Name = "Form4"
+        Me.Name = "Productos"
         Me.Text = "Form4"
-        CType(Me.DGVProd, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProdDGV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -128,10 +128,10 @@ Partial Class Productos
 
     Friend WithEvents lblTitulo As Label
     Friend WithEvents lblCodProd As Label
-    Friend WithEvents lblTexto As TextBox
+    Friend WithEvents Prodtxtbx As TextBox
     Friend WithEvents BuscarBtn As Button
     Friend WithEvents ModificarProBtn As Button
     Friend WithEvents EliminarProBtn As Button
     Friend WithEvents AgregarProBtn As Button
-    Friend WithEvents DGVProd As DataGridView
+    Friend WithEvents ProdDGV As DataGridView
 End Class

@@ -114,7 +114,7 @@ Partial Class Clientes
         Me.EliminarCliBtn.Text = "Eliminar Cliente"
         Me.EliminarCliBtn.UseVisualStyleBackColor = True
         '
-        'Form2
+        'Clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -128,7 +128,7 @@ Partial Class Clientes
         Me.Controls.Add(Me.BuscarCB)
         Me.Controls.Add(Me.ClienteDGV)
         Me.Controls.Add(Me.Titulolbl)
-        Me.Name = "Form2"
+        Me.Name = "Clientes"
         Me.Text = "Form2"
         CType(Me.ClienteDGV, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
