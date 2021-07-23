@@ -32,4 +32,8 @@ Public Class Facturas
         Next
         Return Total
     End Function
+
+    Private Sub Facturas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
