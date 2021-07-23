@@ -166,4 +166,8 @@ Public Class gymbokuform
             MsgBox("No hay factura para ingresar")
         End If
     End Sub
+
+    Private Sub FacturaItem_Click(sender As Object, e As EventArgs) Handles FacturaItem.Click
+        Facturas.Show()
+    End Sub
 End Class
