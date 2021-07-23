@@ -44,6 +44,7 @@ Partial Class gymbokuform
         Me.SuscripcionesItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EntrenadoresItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FacturaItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -205,7 +206,7 @@ Partial Class gymbokuform
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesItem, Me.SuscripcionesItem, Me.ProductosItem, Me.EntrenadoresItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ClientesItem, Me.SuscripcionesItem, Me.ProductosItem, Me.EntrenadoresItem, Me.FacturaItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(801, 24)
@@ -235,6 +236,12 @@ Partial Class gymbokuform
         Me.EntrenadoresItem.Name = "EntrenadoresItem"
         Me.EntrenadoresItem.Size = New System.Drawing.Size(88, 20)
         Me.EntrenadoresItem.Text = "Entrenadores"
+        '
+        'FacturaItem
+        '
+        Me.FacturaItem.Name = "FacturaItem"
+        Me.FacturaItem.Size = New System.Drawing.Size(63, 20)
+        Me.FacturaItem.Text = "Facturas"
         '
         'gymbokuform
         '
@@ -292,4 +299,5 @@ Partial Class gymbokuform
     Friend WithEvents SuscripcionesItem As ToolStripMenuItem
     Friend WithEvents ProductosItem As ToolStripMenuItem
     Friend WithEvents EntrenadoresItem As ToolStripMenuItem
+    Friend WithEvents FacturaItem As ToolStripMenuItem
 End Class
